@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clube Sete — A Rede do Futuro</title>
+  <meta name="description" content="Junte-se ao Clube Sete e conecte-se à comunidade digital que transforma ideias em oportunidades." />
+  <link rel="stylesheet" href="assets/styles.min.css" />
+</head>
+<body>
+  <div class="container">
+    <section class="hero" aria-label="Seção principal">
+      <h1>Construa hoje sua presença na <strong>Rede do Futuro</strong></h1>
+      <h2>Junte-se ao Clube Sete e faça parte da comunidade que conecta, monetiza e transforma.</h2>
+
+      <div class="video">
+        <video id="apresentacao" autoplay loop muted playsinline aria-label="Vídeo de apresentação" preload="auto">
+          <source src="assets/video-apresentacao.mp4" type="video/mp4" />
+          Seu navegador não suporta a reprodução de vídeo.
+        </video>
+      </div>
+
+      <button id="openModal" class="cta" type="button" aria-haspopup="dialog" aria-controls="leadModal">
+        Quero juntar-se a rede do Futuro
+      </button>
+
+      <div class="benefits" aria-label="Benefícios">
+        <article class="card">
+          <h3>Crescimento</h3>
+          <p class="muted">Ferramentas para escalar.</p>
+        </article>
+        <article class="card">
+          <h3>Monetização</h3>
+          <p class="muted">Ganhe com seus conteúdos.</p>
+        </article>
+        <article class="card">
+          <h3>Comunidade</h3>
+          <p class="muted">Conexões que impulsionam.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <a href="#politica">Política de Privacidade</a> • <a href="#termos">Termos de Uso</a>
+    </footer>
+  </div>
+
+  <div id="leadModalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="leadTitle" aria-hidden="true">
+    <div class="modal" id="leadModal">
+      <h3 id="leadTitle">Quase lá! Preencha os seus dados</h3>
+      <form id="leadForm" novalidate>
+        <div class="field">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex.: Ernesto Capiquila" required minlength="3" autocomplete="name" />
+          <p id="errNome" class="error" role="status" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="whats">Número do WhatsApp</label>
+          <input type="tel" id="whats" name="whats" placeholder="Ex.: +2449XXXXXXXX" required autocomplete="tel" />
+          <p id="errWhats" class="error" role="status" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="mensagem">Mensagem de interesse</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Conte-nos como pretende usar a Rede do Futuro" required minlength="10" rows="4"></textarea>
+          <p id="errMensagem" class="error" role="status" aria-live="polite"></p>
+        </div>
+        <div class="field consent">
+          <input type="checkbox" id="consent" required aria-describedby="consentDesc" />
+          <label for="consent" id="consentDesc">Autorizo o tratamento dos meus dados para contacto e proposta.</label>
+        </div>
+        <div class="row">
+          <button type="button" class="btn" id="cancelModal">Cancelar</button>
+          <button type="submit" class="btn primary" id="submitBtn">Submeter</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">Abrindo WhatsApp…</div>
+
+  <script src="assets/main.js" defer></script>
+</body>
+</html>
