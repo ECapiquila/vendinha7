@@ -1,86 +1,77 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Clube Sete — A Rede do Futuro</title>
-  <meta name="description" content="Junte-se ao Clube Sete e conecte-se à comunidade digital que transforma ideias em oportunidades.">
-  <meta property="og:title" content="Clube Sete — A Rede do Futuro">
-  <meta property="og:description" content="Junte-se ao Clube Sete e conecte-se à comunidade digital que transforma ideias em oportunidades.">
-  <meta property="og:image" content="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271200%27%20height%3D%27630%27%20viewBox%3D%270%200%201200%20630%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20x2%3D%271%27%20y1%3D%270%27%20y2%3D%271%27%3E%3Cstop%20stop-color%3D%27%231f6feb%27%20offset%3D%270%27%2F%3E%3Cstop%20stop-color%3D%27%230a1f44%27%20offset%3D%271%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%271200%27%20height%3D%27630%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Ctext%20x%3D%27600%27%20y%3D%27280%27%20fill%3D%27white%27%20font-family%3D%22Poppins%2CInter%2C%27Segoe%20UI%27%2Csans-serif%22%20font-size%3D%2772%27%20font-weight%3D%27600%27%20text-anchor%3D%27middle%27%3EClube%20Sete%3C%2Ftext%3E%3Ctext%20x%3D%27600%27%20y%3D%27380%27%20fill%3D%27white%27%20font-family%3D%22Poppins%2CInter%2C%27Segoe%20UI%27%2Csans-serif%22%20font-size%3D%2736%27%20text-anchor%3D%27middle%27%3EA%20Rede%20do%20Futuro%3C%2Ftext%3E%3C%2Fsvg%3E">
-  <meta property="og:video" content="/assets/video-apresentacao.mp4">
-  <meta property="og:type" content="website">
-  <link rel="stylesheet" href="assets/styles.min.css">
+  <meta name="description" content="Junte-se ao Clube Sete e conecte-se à comunidade digital que transforma ideias em oportunidades." />
+  <link rel="stylesheet" href="assets/styles.min.css" />
 </head>
 <body>
-  <header class="hero" aria-labelledby="hero-title">
-    <div class="hero__content">
-      <h1 id="hero-title">Construa hoje sua presença na Rede do Futuro</h1>
-      <h2 class="hero__subtitle">Junte-se ao Clube Sete e faça parte da comunidade que conecta, monetiza e transforma.</h2>
-      <div class="hero__media">
-        <video id="presentation-video" autoplay loop muted playsinline aria-label="Vídeo de apresentação" poster="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271280%27%20height%3D%27720%27%20viewBox%3D%270%200%201280%20720%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20x2%3D%271%27%20y1%3D%270%27%20y2%3D%271%27%3E%3Cstop%20stop-color%3D%27%231f6feb%27%20offset%3D%270%27%2F%3E%3Cstop%20stop-color%3D%27%230a1f44%27%20offset%3D%271%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%271280%27%20height%3D%27720%27%20fill%3D%27url%28%23bg%29%27%2F%3E%3Ccircle%20cx%3D%27640%27%20cy%3D%27360%27%20r%3D%27120%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.18%29%27%2F%3E%3Cpolygon%20points%3D%27600%2C300%20780%2C360%20600%2C420%27%20fill%3D%27white%27%2F%3E%3C%2Fsvg%3E">
-          <source src="assets/video-apresentacao.mp4" type="video/mp4">
+  <div class="container">
+    <section class="hero" aria-label="Seção principal">
+      <h1>Construa hoje sua presença na <strong>Rede do Futuro</strong></h1>
+      <h2>Junte-se ao Clube Sete e faça parte da comunidade que conecta, monetiza e transforma.</h2>
+
+      <div class="video">
+        <video id="apresentacao" autoplay loop muted playsinline aria-label="Vídeo de apresentação" preload="auto">
+          <source src="assets/video-apresentacao.mp4" type="video/mp4" />
           Seu navegador não suporta a reprodução de vídeo.
         </video>
       </div>
-      <button id="open-modal" class="button button--primary" type="button">Quero juntar-se a rede do Futuro</button>
-      <div class="hero__benefits" aria-label="Benefícios do Clube Sete">
-        <article class="benefit">
-          <div class="benefit__icon" aria-hidden="true">⬈</div>
-          <h3 class="benefit__title">Crescimento</h3>
-          <p class="benefit__description">Amplie sua presença digital com estratégias guiadas e comunidade ativa.</p>
+
+      <button id="openModal" class="cta" type="button" aria-haspopup="dialog" aria-controls="leadModal">
+        Quero juntar-se a rede do Futuro
+      </button>
+
+      <div class="benefits" aria-label="Benefícios">
+        <article class="card">
+          <h3>Crescimento</h3>
+          <p class="muted">Ferramentas para escalar.</p>
         </article>
-        <article class="benefit">
-          <div class="benefit__icon" aria-hidden="true">💰</div>
-          <h3 class="benefit__title">Monetização</h3>
-          <p class="benefit__description">Descubra novas fontes de receita compartilhadas pelos membros da rede.</p>
+        <article class="card">
+          <h3>Monetização</h3>
+          <p class="muted">Ganhe com seus conteúdos.</p>
         </article>
-        <article class="benefit">
-          <div class="benefit__icon" aria-hidden="true">🤝</div>
-          <h3 class="benefit__title">Comunidade</h3>
-          <p class="benefit__description">Faça parte de um ecossistema colaborativo que impulsiona resultados.</p>
+        <article class="card">
+          <h3>Comunidade</h3>
+          <p class="muted">Conexões que impulsionam.</p>
         </article>
       </div>
-      <p class="hero__social-proof">+10.000 pessoas já começaram sua jornada.</p>
-    </div>
-  </header>
+    </section>
 
-  <footer class="footer">
-    <nav aria-label="Rodapé">
-      <a href="/politica-de-privacidade.html">Política de Privacidade</a>
-      <a href="/termos-de-uso.html">Termos de Uso</a>
-    </nav>
-  </footer>
+    <footer>
+      <a href="#politica">Política de Privacidade</a> • <a href="#termos">Termos de Uso</a>
+    </footer>
+  </div>
 
-  <section id="lead-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
-    <div class="modal__overlay" data-dismiss="modal"></div>
-    <div class="modal__dialog">
-      <header class="modal__header">
-        <h2 id="modal-title">Junte-se à Rede do Futuro</h2>
-        <button class="modal__close" type="button" data-dismiss="modal" aria-label="Fechar">×</button>
-      </header>
-      <form id="lead-form" class="modal__form" novalidate>
-        <label class="form__field">
-          <span>Nome completo</span>
-          <input type="text" id="lead-name" name="name" minlength="3" required placeholder="Seu nome">
-        </label>
-        <label class="form__field">
-          <span>Número do WhatsApp</span>
-          <input type="tel" id="lead-whatsapp" name="whatsapp" required placeholder="+244XXXXXXXXX" pattern="\+244\d{9}">
-        </label>
-        <label class="form__checkbox">
-          <input type="checkbox" id="lead-consent" name="consent" required>
-          <span>Autorizo o tratamento dos meus dados para contacto e proposta. <a href="/politica-de-privacidade.html" target="_blank" rel="noopener">Ver Política de Privacidade</a>.</span>
-        </label>
-        <p class="form-status" role="status" aria-live="polite"></p>
-        <div class="modal__actions">
-          <button type="submit" class="button button--primary">Submeter</button>
-          <button type="button" class="button button--secondary" data-dismiss="modal">Cancelar</button>
+  <div id="leadModalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="leadTitle" aria-hidden="true">
+    <div class="modal" id="leadModal">
+      <h3 id="leadTitle">Quase lá! Preencha os seus dados</h3>
+      <form id="leadForm" novalidate>
+        <div class="field">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex.: Ernesto Capiquila" required minlength="3" autocomplete="name" />
+          <p id="errNome" class="error" role="status" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="whats">Número do WhatsApp</label>
+          <input type="tel" id="whats" name="whats" placeholder="Ex.: +2449XXXXXXXX" required autocomplete="tel" />
+          <p id="errWhats" class="error" role="status" aria-live="polite"></p>
+        </div>
+        <div class="field consent">
+          <input type="checkbox" id="consent" required aria-describedby="consentDesc" />
+          <label for="consent" id="consentDesc">Autorizo o tratamento dos meus dados para contacto e proposta.</label>
+        </div>
+        <div class="row">
+          <button type="button" class="btn" id="cancelModal">Cancelar</button>
+          <button type="submit" class="btn primary" id="submitBtn">Submeter</button>
         </div>
       </form>
     </div>
-  </section>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">Abrindo WhatsApp…</div>
 
   <script src="assets/main.js" defer></script>
 </body>
