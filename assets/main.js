@@ -9,9 +9,11 @@
   var form = document.getElementById('leadForm');
   var nameInput = document.getElementById('nome');
   var whatsappInput = document.getElementById('whats');
+  var messageInput = document.getElementById('mensagem');
   var consentInput = document.getElementById('consent');
   var errNome = document.getElementById('errNome');
   var errWhats = document.getElementById('errWhats');
+  var errMensagem = document.getElementById('errMensagem');
   var toastEl = document.getElementById('toast');
   var lastFocused = null;
   var telemetry = {video:false};
@@ -42,6 +44,7 @@
   function clearErrors(){
     if(errNome){ errNome.textContent = ''; }
     if(errWhats){ errWhats.textContent = ''; }
+    if(errMensagem){ errMensagem.textContent = ''; }
   }
 
   function setError(field, message){
@@ -52,7 +55,11 @@
     clearErrors();
     var nome = (nameInput.value || '').trim();
     var numero = normalizePhone(whatsappInput.value);
+    var mensagem = messageInput ? (messageInput.value || '').trim() : '';
     whatsappInput.value = numero;
+    if(messageInput){
+      messageInput.value = mensagem;
+    }
     var valid = true;
 
     if(nome.length < 3){
@@ -67,13 +74,19 @@
       valid = false;
     }
 
+    if(messageInput && mensagem.length < 10){
+      setError(errMensagem, 'Conte-nos sua mensagem (mín. 10 caracteres).');
+      if(valid && messageInput.focus){ messageInput.focus(); }
+      valid = false;
+    }
+
     if(!consentInput.checked){
       showToast('É necessário autorizar o tratamento dos dados.');
       if(valid){ consentInput.focus(); }
       valid = false;
     }
 
-    return {ok: valid, nome: nome, numero: numero};
+    return {ok: valid, nome: nome, numero: numero, mensagem: mensagem};
   }
 
   function getUTMs(){
@@ -99,6 +112,7 @@
       'Novo Lead - Clube Sete',
       'Nome: ' + result.nome,
       'WhatsApp: ' + result.numero,
+      'Mensagem: ' + result.mensagem,
       'UTM: ' + [
         'src=' + utm.utm_source,
         'med=' + utm.utm_medium,
