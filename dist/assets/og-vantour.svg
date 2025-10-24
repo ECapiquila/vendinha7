@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1b2b"/>
+      <stop offset="100%" stop-color="#12243a"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffcf6f"/>
+      <stop offset="100%" stop-color="#ff9844"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="1200" height="630"/>
+  <g fill="#102f4a" opacity="0.6">
+    <path d="M0 472c120-52 256-78 390-29 80 30 152 86 238 91 114 6 194-90 306-128 126-43 266-3 266-3v227H0z"/>
+    <path d="M0 418c97-60 226-83 344-53 82 21 160 76 249 80 114 5 196-78 304-111 124-38 303 18 303 18v248H0z" opacity="0.65"/>
+  </g>
+  <circle cx="955" cy="175" r="120" fill="url(#sun)" opacity="0.9"/>
+  <g fill="#23d366">
+    <path d="M146 450c22-62 74-116 138-125 86-11 150 65 226 65 73 1 117-55 182-78 98-34 208 18 208 18-48 81-146 169-253 185-88 13-175-26-259-39-78-12-164-2-242-26z" opacity="0.45"/>
+    <path d="M143 491c34-38 84-61 135-62 81-1 146 57 220 60 77 2 127-56 198-71 86-19 186 26 186 26-52 69-156 133-256 136-87 3-165-35-247-55-77-18-156-16-236-34z" opacity="0.6"/>
+  </g>
+  <text x="100" y="180" font-family="'Montserrat', 'Segoe UI', sans-serif" font-weight="700" font-size="64" fill="#23d366">Vantour Angola</text>
+  <text x="100" y="250" font-family="'Montserrat', 'Segoe UI', sans-serif" font-weight="600" font-size="42" fill="#ffffff">Tours autênticos e experiências únicas</text>
+  <text x="100" y="320" font-family="'Montserrat', 'Segoe UI', sans-serif" font-weight="400" font-size="28" fill="#e2eef9">City Tour Luanda · Kalandula Falls · Cabo Ledo</text>
+  <rect x="100" y="360" width="420" height="4" fill="#23d366"/>
+  <text x="100" y="420" font-family="'Montserrat', 'Segoe UI', sans-serif" font-weight="500" font-size="30" fill="#ffffff">Reserve pelo WhatsApp +244 952 077 902</text>
+</svg>
